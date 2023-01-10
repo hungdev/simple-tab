@@ -1,0 +1,34 @@
+.tabOption {
+  display: flex;
+  flex-direction: row;
+
+
+  .tabOptionItem {
+    margin-right: 50px;
+    cursor: pointer;
+    color: #979797;
+    width: 125px;
+    text-align: center;
+    margin-top: 10px;
+
+    &::after {
+      display: block;
+      content: '';
+      height: 4px;
+      margin-top: 10px;
+      border-radius: 2px;
+      background: #979797;
+      width: 100%;
+    }
+
+    &.active {
+      color: #123C65;
+
+      &::after {
+        width: 100%;
+        background: #123C65;
+        transition: width 1s ease-in;
+      }
+    }
+  }
+}

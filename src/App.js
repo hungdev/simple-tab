@@ -1,23 +1,30 @@
-import logo from './logo.svg';
-import './App.css';
+import { useEffect } from "react";
+import Tab from "./Tab";
+import styles from './App.module.scss';
+
+
+const Tab1 = () => {
+  useEffect(() => {
+    // console.log("Tab1");
+  }, []);
+
+  return <div className="tab-screen">aaaaa</div>;
+};
+const Tab2 = () => {
+  useEffect(() => {
+    // console.log("Tab2");
+  }, []);
+  return <div className="tab-screen">bbbb</div>;
+};
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Tab>
+        <Tab1 labelType="ah1aaa" tabLabel="Category 1" />
+        <Tab2 labelType="ah2" tabLabel="Category 2" />
+        <Tab1 labelType="ah2" tabLabel="Category 3" />
+      </Tab>
     </div>
   );
 }
