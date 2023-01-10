@@ -9,7 +9,7 @@ export default function Tab(props) {
 
   const onHandleChangeTab = (ind) => () => {
     setActiveTab(ind);
-    onChangeTab(ind);
+    onChangeTab?.(ind);
   };
 
   const renderTabOption = (label, i) => {
