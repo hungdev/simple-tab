@@ -41,4 +41,5 @@ export default App;
 ### Todo:
 - [ ] Add animation
 - [ ] Add custom render tab
+- [ ] Add Vertical Tab
 - [ ] Others
