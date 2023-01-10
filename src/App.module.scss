@@ -1,34 +1,87 @@
-.tabOption {
-  display: flex;
-  flex-direction: row;
+.tabWrapper {
 
+  .tabOption {
+    display: flex;
+    flex-direction: row;
 
-  .tabOptionItem {
-    margin-right: 50px;
-    cursor: pointer;
-    color: #979797;
-    width: 125px;
-    text-align: center;
-    margin-top: 10px;
-
-    &::after {
-      display: block;
-      content: '';
-      height: 4px;
+    .tabOptionItem {
+      margin-right: 40px;
+      cursor: pointer;
+      color: #979797;
+      text-align: center;
       margin-top: 10px;
-      border-radius: 2px;
-      background: #979797;
-      width: 100%;
-    }
 
-    &.active {
-      color: #123C65;
+      .txtLabel {
+        margin: 0 25px;
+      }
 
       &::after {
+        display: block;
+        content: '';
+        height: 4px;
+        margin-top: 10px;
+        border-radius: 2px;
+        background: #979797;
         width: 100%;
-        background: #123C65;
-        transition: width 1s ease-in;
       }
+
+      &.active {
+        color: #123C65;
+
+        &::after {
+          width: 100%;
+          background: #123C65;
+        }
+      }
+    }
+  }
+
+  .tabContent {
+    margin-top: 10px;
+  }
+
+  // vertical style
+  &.vertical {
+    display: flex;
+    flex-direction: row;
+
+    .tabOption {
+      display: flex;
+      flex-direction: column;
+
+      .tabOptionItem {
+        margin: 0;
+        text-align: left;
+
+        .txtLabel {
+          margin: 16px 12px;
+        }
+
+        &::after {
+          display: block;
+          content: '';
+          height: 0px;
+          margin-top: 10px;
+          border-radius: 2px;
+          background: #979797;
+          width: 100%;
+        }
+
+        &.active {
+          color: #123C65;
+          background: #F2F3F4;
+
+          &::after {
+            height: 2px;
+            width: 100%;
+            background: #123C65;
+          }
+        }
+      }
+    }
+
+    .tabContent {
+      margin-left: 20px;
     }
   }
 }
